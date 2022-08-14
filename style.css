@@ -1,0 +1,75 @@
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     width: 100vw;
+     height: 100vh;
+     display: grid;
+     place-content: center;
+     background-color:black;
+}
+body h1{
+    color: #fff;
+}
+.container{
+     padding: 8px;
+     border-radius: 5px;
+     box-shadow:
+     inset -7px -7px 10px #ddd,
+     inset 7px 7px 10px white;
+}
+#gameContainer{
+     width: 400px;
+     height: 400px;
+     display: grid;
+     grid-template-columns: repeat(40, 1fr);
+     grid-template-rows: repeat(40, 1fr);
+     border-style: solid;
+     border-width: 1px;
+     border-color: white #ddd #ddd #ddd;
+}
+.scoreBoard{
+     margin-top: 10px;
+     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+     font-size: 1.3rem;
+     font-weight: 700;
+     color: #fff;
+}
+.snakeBodyPixel{
+     background: radial-gradient(rgb(55, 169, 10), rgb(0, 255, 55));
+     border-radius: 2px;
+}
+.ltr{
+     border-radius: 0px;
+     border-top-right-radius: 50%;
+     border-bottom-right-radius: 50%;
+}
+.rtl{
+     border-radius: 0px;
+     border-top-left-radius: 50%;
+     border-bottom-left-radius: 50%;
+}
+.btt{
+     border-radius: 0px;
+     border-top-right-radius: 50%;
+     border-top-left-radius: 50%;
+}
+.ttb{
+     border-radius: 0px;
+     border-bottom-right-radius: 50%;
+     border-bottom-left-radius: 50%;
+}
+.food{
+     box-shadow: 1px 1px 2px rgb(255, 140, 0),
+     -1px -1px 2px rgb(230, 150, 2);
+     background-color: rgb(248, 45, 22);
+     border-radius: 30% 3s alternate infinite;
+}
+
+@keyframes enlarge {
+     from{transform: scale(0.5);}
+     to{transform: scale(1);}
+}
